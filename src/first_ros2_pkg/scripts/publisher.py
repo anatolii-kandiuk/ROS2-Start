@@ -4,7 +4,7 @@ from std_msgs.msg import String
 
 class HelloWorldPublischer(Node):
     def __init__(self):
-        super().__init__("hello_world_node")
+        super().__init__("hello_world_pub_node")
         self.pub = self.create_publisher(String, "hello_world", 10)
         self.timer = self.create_timer(0.5, self.publish_hello_world)
         self.counter = 0
